@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:the_consultant/layout/home_layout.dart';
 import 'package:the_consultant/modules/profile.dart';
 import 'package:the_consultant/modules/usersignup.dart';
-
 import '../shared/components/coustemtextboudyauth.dart';
 import '../shared/components/coustemtextfieldauth.dart';
 import '../shared/components/coustemtexttilteauth.dart';

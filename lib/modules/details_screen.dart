@@ -4,6 +4,8 @@ import 'package:the_consultant/shared/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../shared/components/schedule_card_alert.dart';
+
 class DetailScreen extends StatelessWidget {
   var _name;
   var _description;
@@ -238,7 +240,7 @@ class DetailScreen extends StatelessWidget {
                       SizedBox(
                         height: 20,
                       ),
-                      ScheduleCard(
+                      ScheduleCardA(
                         'Consultation',
                         'Sunday . 9am - 11am',
                         '12',
@@ -248,7 +250,7 @@ class DetailScreen extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      ScheduleCard(
+                      ScheduleCardA(
                         'Consultation',
                         'Sunday . 9am - 11am',
                         '13',
@@ -258,7 +260,7 @@ class DetailScreen extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      ScheduleCard(
+                      ScheduleCardA(
                         'Consultation',
                         'Sunday . 9am - 11am',
                         '14',

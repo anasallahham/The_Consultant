@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
-
+import 'package:itproject/core/function/validinput.dart';
+import 'package:itproject/view/widget/auth/buttonforimage.dart';
+import 'package:itproject/view/widget/auth/coustemtextboudyauth.dart';
+import 'package:itproject/view/widget/auth/coustemtextfieldauth.dart';
+import 'package:itproject/view/widget/auth/coustemtexttilteauth.dart';
+import 'package:itproject/view/widget/auth/coustmebuttonsauth.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
-
-import '../shared/components/buttonforimage.dart';
-import '../shared/components/coustemtextboudyauth.dart';
-import '../shared/components/coustemtextfieldauth.dart';
-import '../shared/components/coustemtexttilteauth.dart';
-import '../shared/components/coustmebuttonsauth.dart';
-import '../shared/components/logoauth.dart';
-import '../shared/function/validinput.dart';
-
+import 'package:itproject/view/widget/auth/logoauth.dart';
 
 class ExpertSignUp extends StatefulWidget {
   const ExpertSignUp({Key? key}) : super(key: key);
@@ -32,10 +29,39 @@ class _ExpertSignUp extends State<ExpertSignUp> {
     });
   }
 
-  var _daysv ;
- List _days=['Saturday','Sunday','Monday','Tuesday','Wednesday','Thursday','Friday'];
-  var _counsv ;
-  List _couns=['Medical','Law','Education','Family','Economy'];
+  var _Timev;
+  var _Timeve;
+
+  List _Time = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+  ];
+  var selected_day;
+  var start_time;
+
+  //bool selected_time = false;
+  bool sat = false,
+      sun = false,
+      mon = false,
+      tue = false,
+      wed = false,
+      thu = false,
+      fri = false,
+      mediacl = false,
+      carrer = false,
+      psychological = false,
+      family = false,
+      bussnies = false;
 
   @override
   Widget build(BuildContext context) {
@@ -146,74 +172,354 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                 iconData: Icons.info_outline,
                 labelText: "Experience",
               ),
-
-        Container(
-          margin: const EdgeInsets.only(bottom: 25),
-          child: DropdownButtonHideUnderline(child:
-          DropdownButtonFormField(
-            decoration: InputDecoration(
-              hintText: "Select Available days",
-              hintStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
-              floatingLabelBehavior: FloatingLabelBehavior.always,
-              contentPadding:
-              const EdgeInsets.symmetric(vertical: 5, horizontal: 30),
-              suffixIcon: Icon(Icons.calendar_view_week),
-              label: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 9),
-                child: const Text("Available Days"),
-              ),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(30),
-              ),
-            ),
-          style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300,color:Colors.black,),
-            value: _daysv,
-          onChanged: (value){setState(() {
-            _daysv=value;
-          });},
-
-
-          items:_days.map((value) {
-            return DropdownMenuItem(
-              value:value,
-              child:Text(value));
-          }  ).toList(),
-
-        ),),),
-
               Container(
-                margin: const EdgeInsets.only(bottom: 25),
-                child: DropdownButtonHideUnderline(child:
-                DropdownButtonFormField(
-                  decoration: InputDecoration(
-                    hintText: "Select Your Consulting",
-                    hintStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    contentPadding:
-                    const EdgeInsets.symmetric(vertical: 5, horizontal: 30),
-                    suffixIcon: Icon(Icons.question_answer),
-                    label: Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 9),
-                      child: const Text("Consulting"),
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                    ),
+                width: 275,
+                height: 230,
+                decoration: BoxDecoration(
+                    border: Border.all(width: 1, color: Colors.grey.shade400),
+                    color: Colors.grey[200],
+                    borderRadius: BorderRadius.circular(50)),
+                child: Padding(
+                  padding: EdgeInsets.all(18),
+                  child: Column(
+                    children: [
+                      Text("Select Available Time",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold)),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Container(
+                              margin: const EdgeInsets.only(bottom: 25),
+                              child: DropdownButtonHideUnderline(
+                                child: DropdownButtonFormField(
+                                  decoration: InputDecoration(
+                                    hintText: "Start Time",
+                                    hintStyle: const TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w300),
+                                    floatingLabelBehavior:
+                                    FloatingLabelBehavior.always,
+                                    contentPadding: const EdgeInsets.symmetric(
+                                        vertical: 5, horizontal: 30),
+                                    suffixIcon: Icon(Icons.alarm_outlined),
+                                    label: Container(
+                                      margin: const EdgeInsets.symmetric(
+                                          horizontal: 9),
+                                      child: const Text("Available Time Start"),
+                                    ),
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(30),
+                                    ),
+                                  ),
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.black,
+                                  ),
+                                  value: _Timev,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      _Timev = value;
+                                    });
+                                  },
+                                  items: _Time.map((value) {
+                                    return DropdownMenuItem(
+                                        value: value, child: Text(value));
+                                  }).toList(),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Container(
+                              margin: const EdgeInsets.only(bottom: 25),
+                              child: DropdownButtonHideUnderline(
+                                child: DropdownButtonFormField(
+                                  decoration: InputDecoration(
+                                    hintText: "End Time",
+                                    hintStyle: const TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w300),
+                                    floatingLabelBehavior:
+                                    FloatingLabelBehavior.always,
+                                    contentPadding: const EdgeInsets.symmetric(
+                                        vertical: 5, horizontal: 30),
+                                    suffixIcon: Icon(Icons.alarm_outlined),
+                                    label: Container(
+                                      margin: const EdgeInsets.symmetric(
+                                          horizontal: 9),
+                                      child: const Text("Available Time End"),
+                                    ),
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(30),
+                                    ),
+                                  ),
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.black,
+                                  ),
+                                  value: _Timeve,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      _Timeve = value;
+                                    });
+                                  },
+                                  items: _Time.map((value) {
+                                    return DropdownMenuItem(
+                                        value: value, child: Text(value));
+                                  }).toList(),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300,color:Colors.black,),
-                  value: _counsv,
-                  onChanged: (value){setState(() {
-                    _counsv=value;
-                  });},
+                ),
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Container(
+                width: 300,
+                height: 310,
+                decoration: BoxDecoration(
+                    border: Border.all(width: 1, color: Colors.grey.shade400),
+                    color: Colors.grey[200],
+                    borderRadius: BorderRadius.circular(50)),
+                child: Padding(
+                  padding: EdgeInsets.all(18),
+                  child: Column(children: [
+                    Text("Available Days",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold)),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: CheckboxListTile(
+                            title: Text("Sat"),
+                            value: sat,
+                            onChanged: (value) {
+                              setState(() {
+                                sat = value!;
+                              });
+                            },
+                          ),
+                        ),
+                        Expanded(
+                          child: CheckboxListTile(
+                            title: Text("Sun"),
+                            value: sun,
+                            onChanged: (value) {
+                              setState(() {
+                                sun = value!;
+                              });
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: CheckboxListTile(
+                            title: Text("Mon"),
+                            value: mon,
+                            onChanged: (value) {
+                              setState(() {
+                                mon = value!;
+                              });
+                            },
+                          ),
+                        ),
+                        Expanded(
+                          child: CheckboxListTile(
+                            title: Text("Tue"),
+                            value: tue,
+                            onChanged: (value) {
+                              setState(() {
+                                tue = value!;
+                              });
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: CheckboxListTile(
+                            title: Text("Wed"),
+                            value: wed,
+                            onChanged: (value) {
+                              setState(() {
+                                wed = value!;
+                              });
+                            },
+                          ),
+                        ),
+                        Expanded(
+                          child: CheckboxListTile(
+                            title: Text("Thu"),
+                            value: thu,
+                            onChanged: (value) {
+                              setState(() {
+                                thu = value!;
+                              });
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: CheckboxListTile(
+                            title: Text("Fri"),
+                            value: fri,
+                            onChanged: (value) {
+                              setState(() {
+                                fri = value!;
+                              });
+                            },
+                          ),
+                        ),
+                        Expanded(
+                            child: SizedBox(
+                          width: 30,
+                        )),
+                      ],
+                    )
+                  ]),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Container(
+                width: 300,
+                height: 375,
+                decoration: BoxDecoration(
+                    border: Border.all(width: 1, color: Colors.grey.shade400),
+                    color: Colors.grey[200],
+                    borderRadius: BorderRadius.circular(50)),
+                child: Padding(
+                  padding: EdgeInsets.all(18),
+                  child: Column(children: [
+                    Text("Select Counseling Type",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold)),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: CheckboxListTile(
+                            title: Text("Medical"),
+                            value: mediacl,
+                            onChanged: (value) {
+                              setState(() {
+                                mediacl = value!;
+                              });
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: CheckboxListTile(
+                            title: Text("Carrer"),
+                            value: carrer,
+                            onChanged: (value) {
+                              setState(() {
+                                carrer = value!;
+                              });
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: CheckboxListTile(
+                            title: Text("Psychological"),
+                            value: psychological,
+                            onChanged: (value) {
+                              setState(() {
+                                psychological = value!;
+                              });
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: CheckboxListTile(
+                            title: Text("Family"),
+                            value: family,
+                            onChanged: (value) {
+                              setState(() {
+                                family = value!;
+                              });
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: CheckboxListTile(
+                            title: Text("Bussines"),
+                            value: bussnies,
+                            onChanged: (value) {
+                              setState(() {
+                                bussnies = value!;
+                              });
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                ),
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
 
 
-                  items:_couns.map((value) {
-                    return DropdownMenuItem(
-                        value:value,
-                        child:Text(value));
-                  }  ).toList(),
 
-                ),),),
               const SizedBox(height: 20),
               CoustemButtonAuth(
                 text: "Next",

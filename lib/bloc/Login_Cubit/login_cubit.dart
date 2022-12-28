@@ -2,7 +2,9 @@
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:itproject/network/remote/dio.dart';
+
+import '../../shared/network/remote/dio.dart';
+
 
 class LoginCubit extends Cubit<LoginState>
 {

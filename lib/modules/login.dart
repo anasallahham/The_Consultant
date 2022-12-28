@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:itproject/bloc/login_cubit.dart';
-import 'package:itproject/core/function/validinput.dart';
-import 'package:itproject/view/screen/expertsignup.dart';
-import 'package:itproject/view/screen/home_layot.dart';
-import 'package:itproject/view/screen/profile.dart';
-import 'package:itproject/view/screen/usersignup.dart';
-import 'package:itproject/view/widget/auth/coustemtextboudyauth.dart';
-import 'package:itproject/view/widget/auth/coustemtextfieldauth.dart';
-import 'package:itproject/view/widget/auth/coustemtexttilteauth.dart';
-import 'package:itproject/view/widget/auth/coustmebuttonsauth.dart';
-import 'package:itproject/view/widget/auth/textsignuo.dart';
+import 'package:the_consultant/bloc/Login_Cubit/login_cubit.dart';
+import 'package:the_consultant/modules/usersignup.dart';
+import 'package:the_consultant/shared/function/validinput.dart';
+import '../layout/home_layout.dart';
+import '../shared/components/coustemtextboudyauth.dart';
+import '../shared/components/coustemtextfieldauth.dart';
+import '../shared/components/coustemtexttilteauth.dart';
+import '../shared/components/coustmebuttonsauth.dart';
+import '../shared/components/textsignuo.dart';
+import 'expertsignup.dart';
 
 
 

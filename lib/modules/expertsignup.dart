@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:itproject/core/function/validinput.dart';
-import 'package:itproject/view/widget/auth/buttonforimage.dart';
-import 'package:itproject/view/widget/auth/coustemtextboudyauth.dart';
-import 'package:itproject/view/widget/auth/coustemtextfieldauth.dart';
-import 'package:itproject/view/widget/auth/coustemtexttilteauth.dart';
-import 'package:itproject/view/widget/auth/coustmebuttonsauth.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
-import 'package:itproject/view/widget/auth/logoauth.dart';
+import '../shared/components/buttonforimage.dart';
+import '../shared/components/coustemtextboudyauth.dart';
+import '../shared/components/coustemtextfieldauth.dart';
+import '../shared/components/coustemtexttilteauth.dart';
+import '../shared/components/coustmebuttonsauth.dart';
+import '../shared/components/logoauth.dart';
+import '../shared/function/validinput.dart';
+
 
 class ExpertSignUp extends StatefulWidget {
   const ExpertSignUp({Key? key}) : super(key: key);
@@ -57,11 +58,11 @@ class _ExpertSignUp extends State<ExpertSignUp> {
       wed = false,
       thu = false,
       fri = false,
-      mediacl = false,
-      carrer = false,
-      psychological = false,
-      family = false,
-      bussnies = false;
+      medical = false,
+      law = false,
+      education = false,
+      economy = false,
+      family = false;
 
   @override
   Widget build(BuildContext context) {
@@ -437,10 +438,10 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                         Expanded(
                           child: CheckboxListTile(
                             title: Text("Medical"),
-                            value: mediacl,
+                            value: medical,
                             onChanged: (value) {
                               setState(() {
-                                mediacl = value!;
+                                medical = value!;
                               });
                             },
                           ),
@@ -452,11 +453,11 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                       children: [
                         Expanded(
                           child: CheckboxListTile(
-                            title: Text("Carrer"),
-                            value: carrer,
+                            title: Text("Law"),
+                            value: law,
                             onChanged: (value) {
                               setState(() {
-                                carrer = value!;
+                                law = value!;
                               });
                             },
                           ),
@@ -468,11 +469,27 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                       children: [
                         Expanded(
                           child: CheckboxListTile(
-                            title: Text("Psychological"),
-                            value: psychological,
+                            title: Text("Education"),
+                            value: education,
                             onChanged: (value) {
                               setState(() {
-                                psychological = value!;
+                                education = value!;
+                              });
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: CheckboxListTile(
+                            title: Text("Economy"),
+                            value: economy,
+                            onChanged: (value) {
+                              setState(() {
+                                economy = value!;
                               });
                             },
                           ),
@@ -489,22 +506,6 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                             onChanged: (value) {
                               setState(() {
                                 family = value!;
-                              });
-                            },
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Expanded(
-                          child: CheckboxListTile(
-                            title: Text("Bussines"),
-                            value: bussnies,
-                            onChanged: (value) {
-                              setState(() {
-                                bussnies = value!;
                               });
                             },
                           ),

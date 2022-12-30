@@ -7,7 +7,7 @@ class Expert
    String time;
    String phone;
    String address;
-   double money;
+   double wallet;
    String profession;
    String imageUrl;
 
@@ -19,7 +19,7 @@ class Expert
       required this.time,
       required this.phone,
       required this.address,
-      required this.money,
+      required this.wallet,
       required this.profession,
       required this.imageUrl,
    });
@@ -34,7 +34,7 @@ class Expert
          time: jsonData['time'],
          phone: jsonData['phone'],
          address: jsonData['address'],
-         money: jsonData['money'],
+         wallet: jsonData['money'],
          profession: jsonData['profession'],
          imageUrl: jsonData['imageUrl'],
       );

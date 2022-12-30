@@ -3,11 +3,56 @@ import 'package:the_consultant/modules/login.dart';
 import 'package:the_consultant/shared/styles/colors.dart';
 import 'package:the_consultant/modules/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../classes/language.dart';
+import '../classes/language_constants.dart';
+import '../main.dart';
+import '../shared/applocal.dart';
 
 class OnboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: kBackgroundColor,
+        actions: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(14.0),
+            child: DropdownButton<Language>(
+              underline: const SizedBox(),
+              icon:  Icon(
+                Icons.language,
+                color: kOrangeColor,
+              ),
+              onChanged: (Language? language) async {
+                if (language != null) {
+                  Locale _locale = await setLocale(language.languageCode);
+                  MyApp.setLocale(context, _locale);
+                }
+              },
+              items: Language.languageList()
+                  .map<DropdownMenuItem<Language>>(
+                    (e) => DropdownMenuItem<Language>(
+                  value: e,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Text(
+                        e.flag,
+                        style: const TextStyle(fontSize: 30),
+                      ),
+                      Text(e.name)
+                    ],
+                  ),
+                ),
+              )
+                  .toList(),
+            ),
+          ),
+        ],
+      ),
       backgroundColor: kBackgroundColor,
       body: SafeArea(
         bottom: false,
@@ -34,7 +79,7 @@ class OnboardScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      'Choose The Expert\nYou Need',
+                      translation(context).onBoarding2,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 32,
@@ -45,7 +90,7 @@ class OnboardScreen extends StatelessWidget {
                       height: 20,
                     ),
                     Text(
-                      'Best Place for\nThe Best Consultation...',
+                      translation(context).onBoarding,
                       style: TextStyle(
                         fontSize: 16,
                         color: kTitleTextColor.withOpacity(0.7),
@@ -71,7 +116,7 @@ class OnboardScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text(
-                        'Get Started',
+                        translation(context).onBoarding3,
                         style: TextStyle(
                           color: kWhiteColor,
                           fontSize: 16,

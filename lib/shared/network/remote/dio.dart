@@ -11,7 +11,7 @@ class DioHelper
   {
     dio=Dio(
       BaseOptions(
-        baseUrl:'http://192.168.1.105:800/api/',
+        baseUrl:'http://192.168.43.157:8000/api/',
         receiveDataWhenStatusError: true
       )
     );

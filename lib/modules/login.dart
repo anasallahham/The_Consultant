@@ -129,16 +129,13 @@ class _LoginState extends State<Login> {
                     CoustemButtonAuth(
                       text: "Sign In",
                       onPressed: () {
-
-                        LoginCubit.get(context).login(email: emailController.text, password: passController.text)
-            ;          }
-
+                        LoginCubit.get(context).login(email: emailController.text, password: passController.text);
+                     }
                     ),
                     const SizedBox(height: 20),
-
                     textSignUp(
                         textone: "if you don't have account  ?  ",
-                        texttwo: "Sing Up",
+                        texttwo: "Sign Up",
                         onTap: () {
                           if (people == "User") {
                             Navigator.push(

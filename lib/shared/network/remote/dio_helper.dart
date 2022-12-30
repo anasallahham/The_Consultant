@@ -7,7 +7,7 @@ static init()
 {
     dio=Dio(
     BaseOptions(
-      baseUrl: 'http://www.google.com',
+      baseUrl: 'http://192.168.1.4:8080/api/',
       receiveDataWhenStatusError: true,
     )
   );

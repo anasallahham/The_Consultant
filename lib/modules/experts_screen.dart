@@ -21,6 +21,7 @@ class ExpertsScreen extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: ListView.separated(
+          physics: BouncingScrollPhysics(),
           itemBuilder: (context, index) => buildExpertCard(),
           separatorBuilder: (context, index) =>SizedBox(height: 20,),
           itemCount: 10,

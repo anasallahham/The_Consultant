@@ -1,3 +1,6 @@
+import 'package:the_consultant/language/language.dart';
+import 'package:the_consultant/language/language_constants.dart';
+import 'package:the_consultant/main.dart';
 import 'package:the_consultant/shared/components/category_card.dart';
 import 'package:the_consultant/shared/components/expert_card.dart';
 import 'package:the_consultant/shared/components/search_bar.dart';
@@ -14,6 +17,7 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         bottom: false,
         child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -23,7 +27,39 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     SvgPicture.asset('assets/icons/menu.svg'),
-                    SvgPicture.asset('assets/icons/profile.svg'),
+                    Padding(
+            padding: const EdgeInsets.all(3.0),
+            child: DropdownButton<Language>(
+              underline: const SizedBox(),
+              icon:  Icon(
+                Icons.language,
+                color: kTitleTextColor,
+              ),
+              onChanged: (Language? language) async {
+                if (language != null) {
+                  Locale _locale = await setLocale(language.languageCode);
+                  MyApp.setLocale(context, _locale);
+                }
+              },
+              items: Language.languageList()
+                  .map<DropdownMenuItem<Language>>(
+                    (e) => DropdownMenuItem<Language>(
+                  value: e,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Text(
+                        e.flag,
+                        style: const TextStyle(fontSize: 30),
+                      ),
+                      Text(e.name)
+                    ],
+                  ),
+                ),
+              )
+                  .toList(),
+            ),
+          ),
                   ],
                 ),
               ),

@@ -1,13 +1,26 @@
 {
   "homePage": "Home Page",
+  "expert": "Expert",
+  "user": "User",
+
   "onBoarding": "Best Place for \nThe Best Consultation...",
   "onBoarding2": "Choose The Expert \nYou Need",
   "onBoarding3": "Get Started",
+
+  "signIn": "Sign In",
+  "welcome": "Welcome Back",
+  "login1": "Sign In with your email and password as:",
+  "login2": "Don't have an account ?",
+  "signUp": "Sign Up",
+  "password": "Password",
+  "passwordHint": "Enter your password",
+  "email": "Email",
+  "emailHint": "Enter your email",
+
   "personalInformation": "Personal Information",
   "name": "Name",
   "nameHint": "Enter your name",
-  "email": "Email",
-  "emailHint": "Enter your email",
+
   "dateOfBirth": "Date of Birth",
   "requiredField": "Required Field",
   "submitInfo": "Submit Info",

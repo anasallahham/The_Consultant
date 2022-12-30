@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_consultant/bloc/Login_Cubit/login_cubit.dart';
+import 'package:the_consultant/language/language_constants.dart';
 import 'package:the_consultant/modules/usersignup.dart';
 import 'package:the_consultant/shared/function/validinput.dart';
 import '../bloc/Login_Cubit/state.dart';
@@ -36,8 +37,8 @@ class _LoginState extends State<Login> {
         elevation: 0.0,
         toolbarHeight: 70,
         centerTitle: true,
-        title: const Text(
-          'Sign In',
+        title:  Text(
+          translation(context).signIn,
           style: TextStyle(
             color: Colors.grey,
             fontSize: 20,
@@ -66,20 +67,20 @@ class _LoginState extends State<Login> {
                       width: 500,
                       decoration: const BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage("images/pic.png"),
+                            image: AssetImage("assets/images/login.png"),
                             fit: BoxFit.fill,
                           )),
                     ),
                     const SizedBox(height: 10),
-                    const CoustemTextTilteAuth(text: "Welcome Back"),
-                    const CoustemTextBoudyAuth(
-                      text: 'Sign In with your email and password as:',
+                     CoustemTextTilteAuth(text: translation(context).welcome),
+                     CoustemTextBoudyAuth(
+                      text: translation(context).login1,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text(
-                          "User",
+                         Text(
+                          translation(context).user,
                         ),
 
                         Radio(
@@ -91,7 +92,7 @@ class _LoginState extends State<Login> {
                             people = "User";
                           });
                             }),
-                        const Text("Expert"),
+                         Text(translation(context).expert),
                         Radio(
                             value: "Expert",
                             groupValue: people,
@@ -108,9 +109,9 @@ class _LoginState extends State<Login> {
                       valid: (val) {
                         return validinput(val!, 5, 100, "email");
                       },
-                      hintText: "Enter your Email",
+                      hintText: translation(context).emailHint,
                       iconData: Icons.email_outlined,
-                      labelText: "Email",
+                      labelText: translation(context).email,
                       auto: AutovalidateMode.always,
 
                     ),
@@ -120,22 +121,22 @@ class _LoginState extends State<Login> {
                       valid: (val) {
                         return validinput(val!, 5, 30, "password");
                       },
-                      hintText: "Enter your Password",
+                      hintText: translation(context).passwordHint,
                       iconData: Icons.lock_outlined,
-                      labelText: "Password",
+                      labelText: translation(context).password,
                       obscureText: true,
                     ),
                     const SizedBox(height: 20),
                     CoustemButtonAuth(
-                      text: "Sign In",
+                      text: translation(context).signIn,
                       onPressed: () {
                         LoginCubit.get(context).login(email: emailController.text, password: passController.text);
                      }
                     ),
                     const SizedBox(height: 20),
                     textSignUp(
-                        textone: "if you don't have account  ?  ",
-                        texttwo: "Sign Up",
+                        textone: translation(context).login2,
+                        texttwo: translation(context).signUp,
                         onTap: () {
                           if (people == "User") {
                             Navigator.push(

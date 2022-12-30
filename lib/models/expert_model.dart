@@ -1,6 +1,7 @@
 class Expert
 {
-   String name;
+   String name_en;
+   String name_ar;
    String email;
    String password;
    String description;
@@ -12,7 +13,8 @@ class Expert
    String imageUrl;
 
    Expert({
-      required this.name,
+      required this.name_en,
+      required this.name_ar,
       required this.email,
       required this.password,
       required this.description,
@@ -29,12 +31,13 @@ class Expert
       return Expert(
          email: jsonData['email'],
          password: jsonData['password'],
-         name: jsonData['name'],
+         name_en: jsonData['name_en'],
+         name_ar: jsonData['name_ar'],
          description: jsonData['description'],
          time: jsonData['time'],
          phone: jsonData['phone'],
          address: jsonData['address'],
-         wallet: jsonData['money'],
+         wallet: jsonData['wallet'],
          profession: jsonData['profession'],
          imageUrl: jsonData['imageUrl'],
       );

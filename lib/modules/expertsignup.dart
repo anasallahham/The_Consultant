@@ -104,7 +104,7 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                 onPressed: () => uploadImage(),
               ),
               const SizedBox(height: 10),
-              const CoustemTextTilteAuth(text: "New Account For Expert"),
+               CoustemTextTilteAuth(text: "New Account For Expert"),
               const CoustemTextBoudyAuth(
                 text: 'Sign Up with your information below ',
               ),

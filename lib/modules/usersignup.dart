@@ -76,7 +76,7 @@ class _UserSignUp extends State<UserSignUp> {
                 onPressed:()  => uploadImage() ,
               ),
               const SizedBox(height: 10),
-              const CoustemTextTilteAuth(text: "New Account For User"),
+               CoustemTextTilteAuth(text: "New Account For User"),
               const CoustemTextBoudyAuth(
                 text: 'Sign Up with your name (in Arabic and English) ,email and password ',
               ),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CoustemTextTilteAuth extends StatelessWidget {
   final String text;
 
-  const CoustemTextTilteAuth({super.key, required this.text});
+   CoustemTextTilteAuth({super.key, required this.text});
 
 
   @override

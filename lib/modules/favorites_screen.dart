@@ -7,7 +7,7 @@ class FavoritesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kOrangeColor ,
+        backgroundColor: kVioletColor ,
         title: Text(
           'Favorites',
           style: TextStyle(
@@ -34,7 +34,7 @@ class FavoritesScreen extends StatelessWidget {
       'Name',
       'Profession',
       'assets/images/doctor1.png',
-      kOrangeColor,
+      kVioletColor,
     );
   }
 }

@@ -183,6 +183,240 @@ abstract class AppLocalizations {
   /// **'Enter your email'**
   String get emailHint;
 
+  /// No description provided for @uploadImage.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload Image'**
+  String get uploadImage;
+
+  /// No description provided for @newAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'New Account'**
+  String get newAccount;
+
+  /// No description provided for @signUpHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Up with your information below'**
+  String get signUpHint;
+
+  /// No description provided for @nameHintA.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your Name In Arabic'**
+  String get nameHintA;
+
+  /// No description provided for @nameA.
+  ///
+  /// In en, this message translates to:
+  /// **'Expert Name In Arabic'**
+  String get nameA;
+
+  /// No description provided for @nameHintE.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your Name In english'**
+  String get nameHintE;
+
+  /// No description provided for @nameE.
+  ///
+  /// In en, this message translates to:
+  /// **'Expert Name In english'**
+  String get nameE;
+
+  /// No description provided for @addressHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Your Address'**
+  String get addressHint;
+
+  /// No description provided for @address.
+  ///
+  /// In en, this message translates to:
+  /// **'Address'**
+  String get address;
+
+  /// No description provided for @numberHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Phone Number'**
+  String get numberHint;
+
+  /// No description provided for @number.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone Number'**
+  String get number;
+
+  /// No description provided for @experiencesHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Your Experiences'**
+  String get experiencesHint;
+
+  /// No description provided for @selectTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Available Time'**
+  String get selectTime;
+
+  /// No description provided for @endTime.
+  ///
+  /// In en, this message translates to:
+  /// **'End Time'**
+  String get endTime;
+
+  /// No description provided for @startTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Start Time'**
+  String get startTime;
+
+  /// No description provided for @availableDays.
+  ///
+  /// In en, this message translates to:
+  /// **'Available Days'**
+  String get availableDays;
+
+  /// No description provided for @selectCounseling.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Counseling Type'**
+  String get selectCounseling;
+
+  /// No description provided for @consulting.
+  ///
+  /// In en, this message translates to:
+  /// **'Consulting'**
+  String get consulting;
+
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// No description provided for @save.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get save;
+
+  /// No description provided for @home.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get home;
+
+  /// No description provided for @search.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get search;
+
+  /// No description provided for @schedule.
+  ///
+  /// In en, this message translates to:
+  /// **'Schedule'**
+  String get schedule;
+
+  /// No description provided for @profile.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profile;
+
+  /// No description provided for @find.
+  ///
+  /// In en, this message translates to:
+  /// **'Find Your Desired\nExpert'**
+  String get find;
+
+  /// No description provided for @categories.
+  ///
+  /// In en, this message translates to:
+  /// **'Categories'**
+  String get categories;
+
+  /// No description provided for @topConsultants.
+  ///
+  /// In en, this message translates to:
+  /// **'Top Consultants'**
+  String get topConsultants;
+
+  /// No description provided for @medical.
+  ///
+  /// In en, this message translates to:
+  /// **'Medical'**
+  String get medical;
+
+  /// No description provided for @law.
+  ///
+  /// In en, this message translates to:
+  /// **'Law'**
+  String get law;
+
+  /// No description provided for @economy.
+  ///
+  /// In en, this message translates to:
+  /// **'Economy'**
+  String get economy;
+
+  /// No description provided for @education.
+  ///
+  /// In en, this message translates to:
+  /// **'Education'**
+  String get education;
+
+  /// No description provided for @family.
+  ///
+  /// In en, this message translates to:
+  /// **'Family'**
+  String get family;
+
+  /// No description provided for @rating.
+  ///
+  /// In en, this message translates to:
+  /// **'Rating'**
+  String get rating;
+
+  /// No description provided for @profession.
+  ///
+  /// In en, this message translates to:
+  /// **'Profession'**
+  String get profession;
+
+  /// No description provided for @experiences.
+  ///
+  /// In en, this message translates to:
+  /// **'Experiences'**
+  String get experiences;
+
+  /// No description provided for @contact.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact Informations'**
+  String get contact;
+
+  /// No description provided for @upcomingSchedules.
+  ///
+  /// In en, this message translates to:
+  /// **'Upcoming Schedules'**
+  String get upcomingSchedules;
+
+  /// No description provided for @reservations.
+  ///
+  /// In en, this message translates to:
+  /// **'Reservations'**
+  String get reservations;
+
+  /// No description provided for @favorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Favorites'**
+  String get favorites;
+
   /// No description provided for @personalInformation.
   ///
   /// In en, this message translates to:

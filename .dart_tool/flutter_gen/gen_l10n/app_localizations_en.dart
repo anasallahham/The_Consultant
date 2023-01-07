@@ -50,6 +50,123 @@ class AppLocalizationsEn extends AppLocalizations {
   String get emailHint => 'Enter your email';
 
   @override
+  String get uploadImage => 'Upload Image';
+
+  @override
+  String get newAccount => 'New Account';
+
+  @override
+  String get signUpHint => 'Sign Up with your information below';
+
+  @override
+  String get nameHintA => 'Enter your Name In Arabic';
+
+  @override
+  String get nameA => 'Expert Name In Arabic';
+
+  @override
+  String get nameHintE => 'Enter your Name In english';
+
+  @override
+  String get nameE => 'Expert Name In english';
+
+  @override
+  String get addressHint => 'Enter Your Address';
+
+  @override
+  String get address => 'Address';
+
+  @override
+  String get numberHint => 'Enter Phone Number';
+
+  @override
+  String get number => 'Phone Number';
+
+  @override
+  String get experiencesHint => 'Enter Your Experiences';
+
+  @override
+  String get selectTime => 'Select Available Time';
+
+  @override
+  String get endTime => 'End Time';
+
+  @override
+  String get startTime => 'Start Time';
+
+  @override
+  String get availableDays => 'Available Days';
+
+  @override
+  String get selectCounseling => 'Select Counseling Type';
+
+  @override
+  String get consulting => 'Consulting';
+
+  @override
+  String get next => 'Next';
+
+  @override
+  String get save => 'Save';
+
+  @override
+  String get home => 'Home';
+
+  @override
+  String get search => 'Search';
+
+  @override
+  String get schedule => 'Schedule';
+
+  @override
+  String get profile => 'Profile';
+
+  @override
+  String get find => 'Find Your Desired\nExpert';
+
+  @override
+  String get categories => 'Categories';
+
+  @override
+  String get topConsultants => 'Top Consultants';
+
+  @override
+  String get medical => 'Medical';
+
+  @override
+  String get law => 'Law';
+
+  @override
+  String get economy => 'Economy';
+
+  @override
+  String get education => 'Education';
+
+  @override
+  String get family => 'Family';
+
+  @override
+  String get rating => 'Rating';
+
+  @override
+  String get profession => 'Profession';
+
+  @override
+  String get experiences => 'Experiences';
+
+  @override
+  String get contact => 'Contact Informations';
+
+  @override
+  String get upcomingSchedules => 'Upcoming Schedules';
+
+  @override
+  String get reservations => 'Reservations';
+
+  @override
+  String get favorites => 'Favorites';
+
+  @override
   String get personalInformation => 'Personal Information';
 
   @override

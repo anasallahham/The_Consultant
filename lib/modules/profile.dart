@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:the_consultant/core/function/validinput.dart';
+import 'package:the_consultant/core/styles/colors.dart';
+import 'package:the_consultant/shared/components/buttonforimage.dart';
+import 'package:the_consultant/shared/components/coustemtextfieldauth.dart';
+import 'package:the_consultant/shared/components/coustmebuttonsauth.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
-import '../shared/components/buttonforimage.dart';
-import '../shared/components/coustemtextfieldauth.dart';
-import '../shared/components/coustmebuttonsauth.dart';
-import '../shared/function/validinput.dart';
-import '../shared/styles/colors.dart';
 
 
 

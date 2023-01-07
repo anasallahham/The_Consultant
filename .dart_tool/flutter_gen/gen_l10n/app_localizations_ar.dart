@@ -50,6 +50,123 @@ class AppLocalizationsAr extends AppLocalizations {
   String get emailHint => 'أدخل بريدك الالكتروني';
 
   @override
+  String get uploadImage => 'تحميل الصورة';
+
+  @override
+  String get newAccount => 'حساب جديد';
+
+  @override
+  String get signUpHint => 'سجل مع المعلومات الخاصة بك أدناه';
+
+  @override
+  String get nameHintA => 'أدخل اسمك بالعربية';
+
+  @override
+  String get nameA => 'اسم الخبير بالعربية';
+
+  @override
+  String get nameHintE => 'أدخل اسمك باللغة الإنجليزية';
+
+  @override
+  String get nameE => 'اسم الخبير باللغة الإنجليزية';
+
+  @override
+  String get addressHint => 'أدخل عنوانك';
+
+  @override
+  String get address => 'العنوان';
+
+  @override
+  String get numberHint => 'أدخل رقم الهاتف';
+
+  @override
+  String get number => 'رقم الهاتف';
+
+  @override
+  String get experiencesHint => 'أدخل خبراتك';
+
+  @override
+  String get selectTime => 'حدد الوقت المتاح';
+
+  @override
+  String get endTime => 'وقت النهاية';
+
+  @override
+  String get startTime => 'وقت البدء';
+
+  @override
+  String get availableDays => 'الأيام المتاحة';
+
+  @override
+  String get selectCounseling => 'حدد نوع الاستشارة';
+
+  @override
+  String get consulting => 'الاستشارة';
+
+  @override
+  String get next => 'التالي';
+
+  @override
+  String get save => 'حفظ';
+
+  @override
+  String get home => 'الصفحة الرئيسية';
+
+  @override
+  String get search => 'بحث';
+
+  @override
+  String get schedule => 'مواعيد';
+
+  @override
+  String get profile => 'الملف الشخصي';
+
+  @override
+  String get find => 'ابحث عن الخبير المطلوب';
+
+  @override
+  String get categories => 'التصنيفات';
+
+  @override
+  String get topConsultants => 'أفضل الاستشاريين';
+
+  @override
+  String get medical => 'طبي';
+
+  @override
+  String get law => 'قانون';
+
+  @override
+  String get economy => 'اقتصاد';
+
+  @override
+  String get education => 'التعليم';
+
+  @override
+  String get family => 'عائلي';
+
+  @override
+  String get rating => 'تقييم';
+
+  @override
+  String get profession => 'مهنة';
+
+  @override
+  String get experiences => 'خبرة';
+
+  @override
+  String get contact => 'معلومات الاتصال';
+
+  @override
+  String get upcomingSchedules => 'الأوقات المتاحة';
+
+  @override
+  String get reservations => 'الحجوزات';
+
+  @override
+  String get favorites => 'المفضلة';
+
+  @override
   String get personalInformation => 'معلومات شخصية';
 
   @override

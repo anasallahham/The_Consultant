@@ -1,7 +1,7 @@
 import 'package:the_consultant/language/language.dart';
 import 'package:the_consultant/language/language_constants.dart';
 import 'package:the_consultant/layout/home_layout.dart';
-import 'package:the_consultant/modules/login.dart';
+import 'package:the_consultant/modules/select.dart';
 import 'package:the_consultant/shared/styles/colors.dart';
 import 'package:the_consultant/modules/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -105,7 +105,7 @@ class OnboardScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HomeLayout(),
+                            builder: (context) => Select(),
                           ),
                         );
                       },

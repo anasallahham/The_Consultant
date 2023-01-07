@@ -72,7 +72,7 @@ class _LoginExpertState extends State<LoginExpert> {
                     key: 'token',
                     value: state.data.token);
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => FreeDay()));
+                    context, MaterialPageRoute(builder: (context) => HomeLayout()));
               }
             }, builder: (context, state) {
             return Container(

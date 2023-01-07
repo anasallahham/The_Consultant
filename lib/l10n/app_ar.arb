@@ -1,11 +1,14 @@
 {
   "homePage": "الصفحة الرئيسية",
   "expert": "خبير",
+  "experts": "خبراء",
   "user": "مستخدم",
+
 
   "onBoarding": "أفضل مكان لأفضل استشارة ...",
   "onBoarding2": "اختر الخبير الذي تحتاجه",
   "onBoarding3": "لنبدأ",
+
 
   "signIn": "تسجيل الدخول",
   "welcome": "مرحبًا بعودتك",
@@ -17,11 +20,59 @@
   "email": "البريد الإلكتروني",
   "emailHint": "أدخل بريدك الالكتروني",
 
+
+  "uploadImage": "تحميل الصورة",
+  "newAccount": "حساب جديد",
+  "signUpHint": "سجل مع المعلومات الخاصة بك أدناه",
+  "nameHintA": "أدخل اسمك بالعربية",
+  "nameA": "اسم الخبير بالعربية",
+  "nameHintE": "أدخل اسمك باللغة الإنجليزية",
+  "nameE": "اسم الخبير باللغة الإنجليزية",
+  "addressHint": "أدخل عنوانك",
+  "address": "العنوان",
+  "numberHint": "أدخل رقم الهاتف",
+  "number": "رقم الهاتف",
+  "experiencesHint": "أدخل خبراتك",
+  "selectTime": "حدد الوقت المتاح",
+  "endTime": "وقت النهاية",
+  "startTime": "وقت البدء",
+  "availableDays": "الأيام المتاحة",
+  "selectCounseling": "حدد نوع الاستشارة",
+  "consulting": "الاستشارة",
+  "next": "التالي",
+  "save": "حفظ",
+
+
+
+  "home": "الصفحة الرئيسية",
+  "search": "بحث",
+  "schedule": "مواعيد",
+  "profile": "الملف الشخصي",
+  "find": "ابحث عن الخبير المطلوب",
+  "categories": "التصنيفات",
+  "TopConsultants": "أفضل الاستشاريين",
+  "medical": "طبي",
+  "law": "قانون",
+  "economy": "اقتصاد",
+  "education": "التعليم",
+  "family": "عائلي",
+
+
+  "rating": "تقييم",
+  "profession": "مهنة",
+  "experiences": "خبرة",
+  "contact": "معلومات الاتصال",
+  "upcomingSchedules": "الأوقات المتاحة",
+  "reservations": "الحجوزات",
+  "favorites": "المفضلة",
+
+
+
+
   "personalInformation": "معلومات شخصية",
   "name": "اسم",
   "nameHint": "أدخل أسمك",
-  "email": "البريد الإلكتروني",
-  "emailHint": "أدخل بريدك الالكتروني",
+
   "dateOfBirth": "تاريخ الولادة",
   "requiredField": "يتطلب حقلا",
   "submitInfo": "إرسال معلومات",

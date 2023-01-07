@@ -149,8 +149,9 @@ class DetailScreen extends StatelessWidget {
                                           color: kYellowColor.withOpacity(0.1),
                                           borderRadius: BorderRadius.circular(10),
                                         ),
-                                        child: SvgPicture.asset(
-                                          'assets/icons/chat.svg',
+                                        child: Icon(
+                                          Icons.favorite,
+                                          color: Colors.pink,
                                         ),
                                       ),
                                       SizedBox(

@@ -17,6 +17,55 @@
   "email": "Email",
   "emailHint": "Enter your email",
 
+  "uploadImage": "Upload Image",
+  "newAccount": "New Account",
+  "signUpHint": "Sign Up with your information below",
+  "nameHintA": "Enter your Name In Arabic",
+  "nameA": "Expert Name In Arabic",
+  "nameHintE": "Enter your Name In english",
+  "nameE": "Expert Name In english",
+  "addressHint": "Enter Your Address",
+  "address": "Address",
+  "numberHint": "Enter Phone Number",
+  "number": "Phone Number",
+  "experiencesHint": "Enter Your Experiences",
+  "selectTime": "Select Available Time",
+  "endTime": "End Time",
+  "startTime": "Start Time",
+  "availableDays": "Available Days",
+  "selectCounseling": "Select Counseling Type",
+  "consulting":"Consulting",
+  "next": "Next",
+  "save": "Save",
+
+
+
+
+
+
+  "home": "Home",
+  "search": "Search",
+  "schedule": "Schedule",
+  "profile": "Profile",
+  "find": "Find Your Desired\nExpert",
+  "categories": "Categories",
+  "TopConsultants": "Top Consultants",
+  "medical": "Medical",
+  "law": "Law",
+  "economy": "Economy",
+  "education": "Education",
+  "family": "Family",
+
+  "rating": "Rating",
+  "profession": "Profession",
+  "experiences": "Experiences",
+  "contact": "Contact Informations",
+  "upcomingSchedules": "Upcoming Schedules",
+  "reservations": "Reservations",
+  "favorites": "Favorites",
+
+
+
   "personalInformation": "Personal Information",
   "name": "Name",
   "nameHint": "Enter your name",

@@ -1,6 +1,7 @@
 import 'package:the_consultant/language/language.dart';
 import 'package:the_consultant/language/language_constants.dart';
 import 'package:the_consultant/main.dart';
+import 'package:the_consultant/modules/favorites_screen.dart';
 import 'package:the_consultant/shared/components/category_card.dart';
 import 'package:the_consultant/shared/components/expert_card.dart';
 import 'package:the_consultant/shared/components/search_bar.dart';
@@ -26,7 +27,21 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    SvgPicture.asset('assets/icons/menu.svg'),
+                    InkWell(
+                      child: Icon(
+                        Icons.favorite,
+                        color: Colors.pink,
+                      ),
+                        onTap: (){
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context)=> FavoritesScreen(),
+                              )
+                          );
+
+                        } ,
+                    ),
                     Padding(
             padding: const EdgeInsets.all(3.0),
             child: DropdownButton<Language>(

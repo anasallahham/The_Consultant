@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_consultant/language/language_constants.dart';
 import 'package:the_consultant/modules/login_expert.dart';
 import 'package:the_consultant/modules/login_user.dart';
 import 'package:the_consultant/shared/components/coustmebuttonsauth.dart';
@@ -21,8 +22,8 @@ class _SelectState extends State<Select> {
           elevation: 0.0,
           toolbarHeight: 70,
           centerTitle: true,
-          title: const Text(
-            'Who You Are',
+          title:  Text(
+            translation(context).who,
             style: TextStyle(
               color: Colors.grey,
               fontSize: 20,
@@ -57,7 +58,7 @@ class _SelectState extends State<Select> {
                       padding: EdgeInsets.all(18),
                       child: Column(
                         children: [
-                          Text("Enter as:",
+                          Text(translation(context).enter,
                               style: TextStyle(
                                   fontSize: 30, fontWeight: FontWeight.bold)),
                           SizedBox(
@@ -66,8 +67,8 @@ class _SelectState extends State<Select> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              const Text(style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
-                                "User",
+                               Text(style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+                                translation(context).user,
                               ),
                               Radio(
                                   value: "User",
@@ -77,7 +78,7 @@ class _SelectState extends State<Select> {
                                       people = "User";
                                     });
                                   }),
-                              const Text("Expert",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                               Text(translation(context).expert,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                               Radio(
                                   value: "Expert",
                                   groupValue: people,
@@ -98,7 +99,7 @@ class _SelectState extends State<Select> {
                 ),
                 const SizedBox(height: 20),
                 CoustemButtonAuth(
-                    text: "Sign In",
+                    text: translation(context).signIn,
                     onPressed: () {
                       if (people == "User") {
                         Navigator.push(

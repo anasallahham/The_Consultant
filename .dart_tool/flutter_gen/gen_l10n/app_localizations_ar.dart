@@ -11,6 +11,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get expert => 'خبير';
 
   @override
+  String get experts => 'خبراء';
+
+  @override
   String get user => 'مستخدم';
 
   @override
@@ -21,6 +24,12 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get onBoarding3 => 'لنبدأ';
+
+  @override
+  String get who => 'من أنت';
+
+  @override
+  String get enter => 'أدخل كـ:';
 
   @override
   String get signIn => 'تسجيل الدخول';
@@ -102,6 +111,12 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get consulting => 'الاستشارة';
+
+  @override
+  String get walletHint => 'كم من المال في محفظتك';
+
+  @override
+  String get wallet => 'محفظتك';
 
   @override
   String get next => 'التالي';

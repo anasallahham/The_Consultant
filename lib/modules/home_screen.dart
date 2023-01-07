@@ -84,7 +84,7 @@ class HomeScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
-                  'Find Your Desired\nExpert',
+                  translation(context).find,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 32,
@@ -105,7 +105,7 @@ class HomeScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
-                  'Categories',
+                  translation(context).categories,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: kTitleTextColor,
@@ -123,7 +123,7 @@ class HomeScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
-                  'Top Consultants',
+                  translation(context).topConsultants,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: kTitleTextColor,
@@ -208,10 +208,10 @@ class HomeScreen extends StatelessWidget {
 
   buildExpertCard() {
     return ExpertCard(
-      'Name',
-      'Profession',
-      'assets/images/doctor1.png',
-      kOrangeColor,
+      'Anas',
+      'Doctor',
+      'assets/images/doctor2.png',
+      kYellowColor,
     );
   }
 }

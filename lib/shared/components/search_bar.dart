@@ -1,3 +1,5 @@
+import 'package:the_consultant/language/language_constants.dart';
+import 'package:the_consultant/modules/favorites_screen.dart';
 import 'package:the_consultant/shared/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -18,7 +20,7 @@ class SearchBar extends StatelessWidget {
           child: Center(
             child: TextField(
               decoration: InputDecoration.collapsed(
-                hintText: 'Search for consultants',
+                hintText: translation(context).search,
               ),
             ),
           ),
@@ -26,7 +28,14 @@ class SearchBar extends StatelessWidget {
         Align(
           alignment: Alignment.centerRight,
           child: MaterialButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context)=> FavoritesScreen(),
+                  )
+              );
+            },
             color: kOrangeColor,
             padding: EdgeInsets.symmetric(
               horizontal: 10,

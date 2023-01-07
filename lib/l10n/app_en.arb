@@ -1,11 +1,16 @@
 {
   "homePage": "Home Page",
   "expert": "Expert",
+  "experts": "Experts",
   "user": "User",
 
   "onBoarding": "Best Place for \nThe Best Consultation...",
   "onBoarding2": "Choose The Expert \nYou Need",
   "onBoarding3": "Get Started",
+
+  "who": "Who You Are",
+  "enter": "Enter as:",
+
 
   "signIn": "Sign In",
   "welcome": "Welcome Back",
@@ -35,6 +40,8 @@
   "availableDays": "Available Days",
   "selectCounseling": "Select Counseling Type",
   "consulting":"Consulting",
+  "walletHint": "How much money in your wallet",
+  "wallet": "Wallet",
   "next": "Next",
   "save": "Save",
 
@@ -43,10 +50,10 @@
 
 
 
-  "home": "Home",
-  "search": "Search",
-  "schedule": "Schedule",
-  "profile": "Profile",
+  "home": "HOME",
+  "search": "SEARCH",
+  "schedule": "SCHEDULE",
+  "profile": "PROFILE",
   "find": "Find Your Desired\nExpert",
   "categories": "Categories",
   "topConsultants": "Top Consultants",

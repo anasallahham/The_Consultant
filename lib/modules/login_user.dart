@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_consultant/bloc/user_login_cubit.dart';
 import 'package:the_consultant/core/function/validinput.dart';
+import 'package:the_consultant/language/language_constants.dart';
 import 'package:the_consultant/modules/usersignup.dart';
 import 'package:the_consultant/shared/components/coustemtextboudyauth.dart';
 import 'package:the_consultant/shared/components/coustemtextfieldauth.dart';
@@ -45,8 +46,8 @@ class _LoginUserState extends State<LoginUser> {
         elevation: 0.0,
         toolbarHeight: 70,
         centerTitle: true,
-        title: const Text(
-          'User Sign In',
+        title:  Text(
+          translation(context).signIn,
           style: TextStyle(
             color: Colors.grey,
             fontSize: 20,
@@ -82,9 +83,9 @@ class _LoginUserState extends State<LoginUser> {
                           )),
                     ),
                     const SizedBox(height: 10),
-                    CoustemTextTilteAuth(text: "Welcome Back"),
-                    const CoustemTextBoudyAuth(
-                      text: 'Sign In with your email and password ',
+                    CoustemTextTilteAuth(text: translation(context).welcome),
+                     CoustemTextBoudyAuth(
+                      text: translation(context).login1,
                     ),
                     const SizedBox(height: 30),
                     CoustemTextFieldAuth(
@@ -92,9 +93,9 @@ class _LoginUserState extends State<LoginUser> {
                       valid: (val) {
                         return validinput(val!, 5, 100, "email");
                       },
-                      hintText: "Enter your Email",
+                      hintText: translation(context).emailHint,
                       iconData: Icons.email_outlined,
-                      labelText: "Email",
+                      labelText: translation(context).email,
                       auto: AutovalidateMode.always,
 
                     ),
@@ -104,14 +105,14 @@ class _LoginUserState extends State<LoginUser> {
                       valid: (val) {
                         return validinput(val!, 5, 30, "password");
                       },
-                      hintText: "Enter your Password",
+                      hintText: translation(context).passwordHint,
                       iconData: Icons.lock_outlined,
-                      labelText: "Password",
+                      labelText: translation(context).password,
                       obscureText: true,
                     ),
                     const SizedBox(height: 20),
                     CoustemButtonAuth(
-                      text: "Sign In",
+                      text: translation(context).signIn,
                       onPressed: () {
                           UserLoginCubit.get(context).Userlogin(
                               email: emailController.text,
@@ -123,8 +124,8 @@ class _LoginUserState extends State<LoginUser> {
                     const SizedBox(height: 20),
 
                     textSignUp(
-                        textone: "if you don't have account  ?  ",
-                        texttwo: "Sing Up",
+                        textone: translation(context).login2,
+                        texttwo: translation(context).signUp,
                         onTap: () {
                             Navigator.push(
                               context,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_consultant/language/language_constants.dart';
 import 'package:the_consultant/shared/components/schedule_card.dart';
 import 'package:the_consultant/shared/styles/colors.dart';
 class ScheduleScreen extends StatelessWidget {
@@ -9,7 +10,7 @@ class ScheduleScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: kOrangeColor ,
         title: Text(
-          'Reservations',
+          translation(context).reservations,
           style: TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.bold

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_consultant/bloc/expert_signup_cubit.dart';
 import 'package:the_consultant/core/function/validinput.dart';
+import 'package:the_consultant/language/language_constants.dart';
 import 'package:the_consultant/network/local/cache.dart';
 import 'package:the_consultant/modules/free_day.dart';
 import 'package:the_consultant/shared/components/buttonforimage.dart';
@@ -81,8 +82,8 @@ class _ExpertSignUp extends State<ExpertSignUp> {
         elevation: 0.0,
         toolbarHeight: 70,
         centerTitle: true,
-        title: const Text(
-          'Expert Sign Up',
+        title:  Text(
+          translation(context).signUp,
           style: TextStyle(
             color: Colors.grey,
             fontSize: 20,
@@ -122,13 +123,13 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                     )
                   : LogoAuth(),
               buttonForImage(
-                text: "Upload Image",
+                text: translation(context).uploadImage,
                 onPressed: () => uploadImage(),
               ),
               const SizedBox(height: 10),
-              CoustemTextTilteAuth(text: "New Account For Expert"),
-              const CoustemTextBoudyAuth(
-                text: 'Sign Up with your information below ',
+              CoustemTextTilteAuth(text: translation(context).newAccount),
+               CoustemTextBoudyAuth(
+                text: translation(context).signUpHint,
               ),
               const SizedBox(height: 20),
               CoustemTextFieldAuth(
@@ -137,9 +138,9 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                   return validinput(val!, 3, 20, "name");
                 },
                 mycontroller: ar_nameController,
-                hintText: "Enter your Name In Arabic",
+                hintText: translation(context).nameHintA,
                 iconData: Icons.person_outlined,
-                labelText: "Expert Name In Arabic",
+                labelText: translation(context).nameA,
               ),
               CoustemTextFieldAuth(
                 auto: AutovalidateMode.always,
@@ -147,9 +148,9 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                   return validinput(val!, 3, 20, "name");
                 },
                 mycontroller: en_nameController,
-                hintText: "Enter your Name In English",
+                hintText: translation(context).nameHintE,
                 iconData: Icons.person_outlined,
-                labelText: "Expert Name In English",
+                labelText: translation(context).nameE,
               ),
               CoustemTextFieldAuth(
                 auto: AutovalidateMode.always,
@@ -157,9 +158,9 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                   return validinput(val!, 5, 100, "email");
                 },
                 mycontroller: emailController,
-                hintText: "Enter your Email",
+                hintText: translation(context).emailHint,
                 iconData: Icons.email_outlined,
-                labelText: "Email",
+                labelText: translation(context).email,
               ),
               CoustemTextFieldAuth(
                 auto: AutovalidateMode.always,
@@ -167,9 +168,9 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                   return validinput(val!, 5, 30, "password");
                 },
                 mycontroller: passController,
-                hintText: "Enter your Password",
+                hintText: translation(context).passwordHint,
                 iconData: Icons.lock_outlined,
-                labelText: "Password",
+                labelText: translation(context).password,
                 obscureText: true,
               ),
               CoustemTextFieldAuth(
@@ -178,9 +179,9 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                   return validinput(val!, 5, 20, "Address");
                 },
                 mycontroller: addressController,
-                hintText: "Enter Your Address",
+                hintText: translation(context).addressHint,
                 iconData: Icons.home_outlined,
-                labelText: "Address",
+                labelText: translation(context).address,
               ),
               CoustemTextFieldAuth(
                 mycontroller: phoneController,
@@ -188,9 +189,9 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                 valid: (val) {
                   return validinput(val!, 10, 10, "Phone Number");
                 },
-                hintText: "Enter Phone Number",
+                hintText: translation(context).numberHint,
                 iconData: Icons.phone,
-                labelText: "Phone Number",
+                labelText: translation(context).number,
               ),
               CoustemTextFieldAuth(
                 mycontroller: experienceController,
@@ -198,9 +199,9 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                 valid: (val) {
                   return validinput(val!, 1, 20, "Experience");
                 },
-                hintText: "Enter Your Experiences",
+                hintText: translation(context).experiencesHint,
                 iconData: Icons.info_outline,
-                labelText: "Experience",
+                labelText: translation(context).experiences,
               ),
               CoustemTextFieldAuth(
                 mycontroller: walletController,
@@ -208,9 +209,9 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                 valid: (val) {
                   return validinput(val!, 5, 30, "wallet");
                 },
-                hintText: "How much money in your wallet",
+                hintText: translation(context).walletHint,
                 iconData: Icons.attach_money_outlined,
-                labelText: "Wallet",
+                labelText: translation(context).wallet,
                 obscureText: true,
               ),
               Row(
@@ -222,7 +223,7 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                       child: DropdownButtonHideUnderline(
                         child: DropdownButtonFormField(
                           decoration: InputDecoration(
-                            hintText: "Select Counseling Type",
+                            hintText: translation(context).selectCounseling,
                             hintStyle: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w300),
@@ -234,7 +235,7 @@ class _ExpertSignUp extends State<ExpertSignUp> {
                             label: Container(
                               margin: const EdgeInsets.symmetric(
                                   horizontal: 9),
-                              child: const Text("Counsolting"),
+                              child:  Text(translation(context).consulting),
                             ),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
@@ -289,7 +290,7 @@ class _ExpertSignUp extends State<ExpertSignUp> {
               SizedBox(height: 20),
 
               CoustemButtonAuth(
-                text: "Next",
+                text: translation(context).next,
                 onPressed: () {
                   ExpertSignUpCubit.get(context).ExpertSignUp(
                   name_ar:ar_nameController.text,

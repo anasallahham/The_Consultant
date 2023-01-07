@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_consultant/language/language_constants.dart';
 import 'package:the_consultant/shared/styles/colors.dart';
 import 'package:the_consultant/shared/components/expert_card.dart';
 class ExpertsScreen extends StatelessWidget {
@@ -9,7 +10,7 @@ class ExpertsScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: kOrangeColor ,
         title: Text(
-          'Experts',
+          translation(context).experts,
           style: TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.bold
@@ -31,9 +32,9 @@ class ExpertsScreen extends StatelessWidget {
   }
   buildExpertCard() {
     return ExpertCard(
-      'Name',
-      'Profession',
-      'assets/images/doctor1.png',
+      'Anas',
+      'Doctor',
+      'assets/images/doctor2.png',
       kOrangeColor,
     );
   }

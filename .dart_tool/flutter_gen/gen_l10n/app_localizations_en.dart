@@ -11,6 +11,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get expert => 'Expert';
 
   @override
+  String get experts => 'Experts';
+
+  @override
   String get user => 'User';
 
   @override
@@ -21,6 +24,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onBoarding3 => 'Get Started';
+
+  @override
+  String get who => 'Who You Are';
+
+  @override
+  String get enter => 'Enter as:';
 
   @override
   String get signIn => 'Sign In';
@@ -104,22 +113,28 @@ class AppLocalizationsEn extends AppLocalizations {
   String get consulting => 'Consulting';
 
   @override
+  String get walletHint => 'How much money in your wallet';
+
+  @override
+  String get wallet => 'Wallet';
+
+  @override
   String get next => 'Next';
 
   @override
   String get save => 'Save';
 
   @override
-  String get home => 'Home';
+  String get home => 'HOME';
 
   @override
-  String get search => 'Search';
+  String get search => 'SEARCH';
 
   @override
-  String get schedule => 'Schedule';
+  String get schedule => 'SCHEDULE';
 
   @override
-  String get profile => 'Profile';
+  String get profile => 'PROFILE';
 
   @override
   String get find => 'Find Your Desired\nExpert';

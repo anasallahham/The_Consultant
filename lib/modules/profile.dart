@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_consultant/core/function/validinput.dart';
 import 'package:the_consultant/core/styles/colors.dart';
+import 'package:the_consultant/language/language_constants.dart';
 import 'package:the_consultant/shared/components/buttonforimage.dart';
 import 'package:the_consultant/shared/components/coustemtextfieldauth.dart';
 import 'package:the_consultant/shared/components/coustmebuttonsauth.dart';
@@ -101,7 +102,7 @@ class _Profile extends State<Profile> {
                                                     width: 5),
                                                 image: const DecorationImage(
                                                   image: AssetImage(
-                                                      "images/p1.png"),
+                                                      "assets/images/p1.png"),
                                                 )),
                                           ),
                                         ],
@@ -119,7 +120,7 @@ class _Profile extends State<Profile> {
                 padding:
                     const EdgeInsets.symmetric(vertical: 0, horizontal: 70),
                 child: buttonForImage(
-                  text: "Upload Image",
+                  text: translation(context).uploadImage,
                   onPressed: () => uploadImage(),
                 ),
               ),
@@ -134,7 +135,7 @@ class _Profile extends State<Profile> {
                   },
                   hintText: "",
                   iconData: Icons.person_outlined,
-                  labelText: "Your Name In Arabic",
+                  labelText: translation(context).nameA,
                 ),
               ),
               Container(
@@ -147,7 +148,7 @@ class _Profile extends State<Profile> {
                   },
                   hintText: "",
                   iconData: Icons.person_outlined,
-                  labelText: "Your Name In English",
+                  labelText: translation(context).nameE,
                 ),
               ),
               Container(
@@ -160,7 +161,7 @@ class _Profile extends State<Profile> {
                   },
                   hintText: "",
                   iconData: Icons.email_outlined,
-                  labelText: "Email",
+                  labelText: translation(context).email,
                 ),
               ),
               Container(
@@ -173,7 +174,7 @@ class _Profile extends State<Profile> {
                   },
                   hintText: "",
                   iconData: Icons.lock_outlined,
-                  labelText: "Password",
+                  labelText: translation(context).password,
                   obscureText: true,
                 ),
               ),
@@ -187,7 +188,7 @@ class _Profile extends State<Profile> {
                   },
                   hintText: "",
                   iconData: Icons.home_outlined,
-                  labelText: "Your Address",
+                  labelText: translation(context).address,
                 ),
               ),
               Container(
@@ -200,7 +201,7 @@ class _Profile extends State<Profile> {
                   },
                   hintText: "",
                   iconData: Icons.phone,
-                  labelText: "Phone Number",
+                  labelText: translation(context).number,
                 ),
               ),
               Container(
@@ -213,7 +214,7 @@ class _Profile extends State<Profile> {
                   },
                   hintText: "",
                   iconData: Icons.info_outline,
-                  labelText: "Your Experience",
+                  labelText: translation(context).experiences,
                 ),
               ),
               Container(
@@ -226,7 +227,7 @@ class _Profile extends State<Profile> {
                   },
                   hintText: "",
                   iconData: Icons.calendar_view_week,
-                  labelText: "Available Days",
+                  labelText: translation(context).availableDays,
                 ),
               ),
               Container(
@@ -239,7 +240,7 @@ class _Profile extends State<Profile> {
                   },
                   hintText: " ",
                   iconData: Icons.question_answer,
-                  labelText: "Your Consulting",
+                  labelText: translation(context).consulting,
                 ),
               ),
               const SizedBox(height: 5),
@@ -247,7 +248,7 @@ class _Profile extends State<Profile> {
                 padding:
                     const EdgeInsets.symmetric(vertical: 0, horizontal: 35),
                 child: CoustemButtonAuth(
-                  text: "Save",
+                  text: translation(context).save,
                   onPressed: () {},
                 ),
               ),

@@ -105,6 +105,12 @@ abstract class AppLocalizations {
   /// **'Expert'**
   String get expert;
 
+  /// No description provided for @experts.
+  ///
+  /// In en, this message translates to:
+  /// **'Experts'**
+  String get experts;
+
   /// No description provided for @user.
   ///
   /// In en, this message translates to:
@@ -128,6 +134,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Get Started'**
   String get onBoarding3;
+
+  /// No description provided for @who.
+  ///
+  /// In en, this message translates to:
+  /// **'Who You Are'**
+  String get who;
+
+  /// No description provided for @enter.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter as:'**
+  String get enter;
 
   /// No description provided for @signIn.
   ///
@@ -291,6 +309,18 @@ abstract class AppLocalizations {
   /// **'Consulting'**
   String get consulting;
 
+  /// No description provided for @walletHint.
+  ///
+  /// In en, this message translates to:
+  /// **'How much money in your wallet'**
+  String get walletHint;
+
+  /// No description provided for @wallet.
+  ///
+  /// In en, this message translates to:
+  /// **'Wallet'**
+  String get wallet;
+
   /// No description provided for @next.
   ///
   /// In en, this message translates to:
@@ -306,25 +336,25 @@ abstract class AppLocalizations {
   /// No description provided for @home.
   ///
   /// In en, this message translates to:
-  /// **'Home'**
+  /// **'HOME'**
   String get home;
 
   /// No description provided for @search.
   ///
   /// In en, this message translates to:
-  /// **'Search'**
+  /// **'SEARCH'**
   String get search;
 
   /// No description provided for @schedule.
   ///
   /// In en, this message translates to:
-  /// **'Schedule'**
+  /// **'SCHEDULE'**
   String get schedule;
 
   /// No description provided for @profile.
   ///
   /// In en, this message translates to:
-  /// **'Profile'**
+  /// **'PROFILE'**
   String get profile;
 
   /// No description provided for @find.

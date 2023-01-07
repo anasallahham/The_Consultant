@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:the_consultant/language/language_constants.dart';
 import 'package:the_consultant/modules/profile.dart';
 import 'package:the_consultant/modules/schedule_screen.dart';
+import 'package:the_consultant/modules/search_screen.dart';
 
 import '../modules/experts_screen.dart';
 import '../modules/home_screen.dart';
@@ -15,7 +17,7 @@ class _HomeLayoutState extends State<HomeLayout> {
   int currentIndex=0;
   List<Widget> screens= [
     HomeScreen(),
-    ExpertsScreen(),
+    SearchScreen(),
     ScheduleScreen(),
     Profile(),
   ];
@@ -36,19 +38,19 @@ class _HomeLayoutState extends State<HomeLayout> {
           items:[
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
-              label: 'HOME',
+              label: translation(context).home,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.search),
-              label: 'SEARCH',
+              label: translation(context).search,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.calendar_today),
-              label: 'SCHEDULE',
+              label: translation(context).schedule,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person),
-              label: 'PROFILE',
+              label: translation(context).profile,
             ),
           ]
       ),

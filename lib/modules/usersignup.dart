@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_consultant/bloc/user_signup_cubit.dart';
 import 'package:the_consultant/core/function/validinput.dart';
+import 'package:the_consultant/language/language_constants.dart';
 import 'package:the_consultant/shared/components/buttonforimage.dart';
 import 'package:the_consultant/shared/components/coustemtextboudyauth.dart';
 import 'package:the_consultant/shared/components/coustemtextfieldauth.dart';
@@ -68,8 +69,8 @@ class _UserSignUp extends State<UserSignUp> {
         elevation: 0.0,
         toolbarHeight: 70,
         centerTitle: true,
-        title: const Text(
-          'User Sign Up',
+        title:  Text(
+          translation(context).signUp,
           style: TextStyle(
             color: Colors.grey,
             fontSize: 20,
@@ -108,11 +109,11 @@ class _UserSignUp extends State<UserSignUp> {
                         )
                       : LogoAuth(),
                   buttonForImage(
-                    text: "Upload Image",
+                    text: translation(context).uploadImage,
                     onPressed: () => uploadImage(),
                   ),
                   const SizedBox(height: 10),
-                   CoustemTextTilteAuth(text: "New Account For User"),
+                   CoustemTextTilteAuth(text: translation(context).newAccount),
                   const CoustemTextBoudyAuth(
                     text:
                         'Sign Up with your name (in Arabic and English) ,email and password ',
@@ -123,9 +124,9 @@ class _UserSignUp extends State<UserSignUp> {
                     valid: (val) {
                       return validinput(val!, 3, 20, "name");
                     },
-                    hintText: "Enter your Name In Arabic",
+                    hintText: translation(context).nameHintA,
                     iconData: Icons.person_outlined,
-                    labelText: "User Name In Arabic",
+                    labelText: translation(context).nameA,
                   ),
                   CoustemTextFieldAuth(
                     mycontroller: nameController,
@@ -133,9 +134,9 @@ class _UserSignUp extends State<UserSignUp> {
                     valid: (val) {
                       return validinput(val!, 3, 20, "name");
                     },
-                    hintText: "Enter your Name In English",
+                    hintText: translation(context).nameHintE,
                     iconData: Icons.person_outlined,
-                    labelText: "User Name In English",
+                    labelText: translation(context).nameE,
                   ),
                   CoustemTextFieldAuth(
                     mycontroller: emailController,
@@ -143,9 +144,9 @@ class _UserSignUp extends State<UserSignUp> {
                     valid: (val) {
                       return validinput(val!, 5, 100, "email");
                     },
-                    hintText: "Enter your Email",
+                    hintText: translation(context).emailHint,
                     iconData: Icons.email_outlined,
-                    labelText: "Email",
+                    labelText: translation(context).email,
                   ),
                   CoustemTextFieldAuth(
                     auto: AutovalidateMode.always,
@@ -153,9 +154,9 @@ class _UserSignUp extends State<UserSignUp> {
                       return validinput(val!, 5, 30, "password");
                     },
                     mycontroller: passController,
-                    hintText: "Enter your Password",
+                    hintText: translation(context).passwordHint,
                     iconData: Icons.lock_outlined,
-                    labelText: "Password",
+                    labelText: translation(context).password,
                     obscureText: true,
                   ),
                   CoustemTextFieldAuth(
@@ -164,15 +165,15 @@ class _UserSignUp extends State<UserSignUp> {
                     valid: (val) {
                       return validinput(val!, 5, 30, "wallet");
                     },
-                    hintText: "How much money in your wallet",
+                    hintText: translation(context).walletHint,
                     iconData: Icons.attach_money_outlined,
-                    labelText: "Wallet",
+                    labelText: translation(context).wallet,
                     obscureText: true,
                   ),
                   SizedBox(height: 20),
                   const SizedBox(height: 20),
                   CoustemButtonAuth(
-                    text: "Next",
+                    text: translation(context).next,
                     onPressed: () {
                       UserSignUpCubit.get(context).UserSignUp(
                         name: nameController.text,

@@ -1,4 +1,5 @@
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:the_consultant/language/language_constants.dart';
 import 'package:the_consultant/shared/components/schedule_card.dart';
 import 'package:the_consultant/shared/styles/colors.dart';
 import 'package:flutter/material.dart';
@@ -111,7 +112,7 @@ class DetailScreen extends StatelessWidget {
                                   Row(
                                     children: <Widget>[
                                       Text(
-                                          'Rating:',
+                                        translation(context).rating,
                                         style: TextStyle(
                                           color: kTitleTextColor.withOpacity(0.7),
                                            ),
@@ -169,7 +170,7 @@ class DetailScreen extends StatelessWidget {
                         height: 50,
                       ),
                       Text(
-                        'Profession:',
+                        translation(context).profession,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
@@ -190,7 +191,7 @@ class DetailScreen extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        'Experiences:',
+                        translation(context).experiences,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
@@ -211,7 +212,7 @@ class DetailScreen extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        'Contact Informations:',
+                        translation(context).contact,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
@@ -232,7 +233,7 @@ class DetailScreen extends StatelessWidget {
                         height: 20,
                       ),
                       Text(
-                        'Upcoming Schedules',
+                        translation(context).upcomingSchedules,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,

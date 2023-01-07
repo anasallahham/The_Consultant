@@ -9,6 +9,9 @@
   "onBoarding2": "اختر الخبير الذي تحتاجه",
   "onBoarding3": "لنبدأ",
 
+  "who": "من أنت",
+  "enter": "أدخل كـ:",
+
 
   "signIn": "تسجيل الدخول",
   "welcome": "مرحبًا بعودتك",
@@ -39,6 +42,8 @@
   "availableDays": "الأيام المتاحة",
   "selectCounseling": "حدد نوع الاستشارة",
   "consulting": "الاستشارة",
+  "walletHint": "كم من المال في محفظتك",
+  "wallet": "محفظتك",
   "next": "التالي",
   "save": "حفظ",
 

@@ -3,13 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:the_consultant/language/language_constants.dart';
+import 'package:the_consultant/network/remote/dio.dart';
 import 'package:the_consultant/shared/applocal.dart';
 
 
 import 'modules/onboard_screen.dart';
 
 
-void main() => runApp(MyApp());
+void main(){
+  DioHelper.init();
+  runApp(MyApp());
+}
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);

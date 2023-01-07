@@ -6,13 +6,13 @@ import 'package:the_consultant/network/local/cache.dart';
 class DioHelper
 {
 
-  static late Dio  dio;
+  static late Dio dio;
 
   static void init()
   {
     dio=Dio(
         BaseOptions(
-            baseUrl:'http://192.168.1.4:8080/api/',
+            baseUrl:'http://192.168.43.96:8080/api/',
 
             receiveDataWhenStatusError: true
         )
